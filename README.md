@@ -20,6 +20,10 @@ Enable browser + plugin spell checking ability within static website content ele
 
 **Important:** This script is intended for frontend views only. Don't use it in backend/admin tools.
 
+![Example](preview-example.png)
+
+<br>
+
 ### Challenges
 
 - You want an additional quality measure (e.g. this can be a great visual aid for external QA teams)
