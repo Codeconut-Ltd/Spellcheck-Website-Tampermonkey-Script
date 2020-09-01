@@ -1,14 +1,29 @@
-![Preview](preview.png)
+![Example](images/teaser.png)
 
 # Spellcheck Websites
 
+- [Preview](#preview)
 - [About](#about)
 - [How to use](#how-to-use)
 - [How it works](#how-it-works)
 - [Warnings](#warnings)
 - [Todo](#todo)
 
+---
+
+<br><br>
+
+## Preview
+
+With [Grammarly](https://app.grammarly.com/)
+
+![Preview - Grammarly](images/preview-grammarly.png)
+
 <br>
+
+With [LanguageTool](https://languagetool.org/)
+
+![Preview - LanguageTool](images/preview-languagetool.png)
 
 ---
 
@@ -19,11 +34,6 @@
 Enable browser + plugin spell checking ability within static website content elements. This is different from basically all other spell checker tools, as they work _only_ with input forms or editable elements.
 
 **Important:** This script is intended for frontend views only. Don't use it in backend/admin tools.
-
-### Preview
-
-![Example](preview-example.png)
-
 
 ### Challenges
 
@@ -93,7 +103,7 @@ Enabling multiple plugins simultaneously could lead to none of them working at a
 3. Add a 'New userscript' in Tampermonkey and remove its default code
 4. Copy the [JavaScript](/scripts/tampermonkey-spellcheck.js) in the userscript form
 5. Edit the top-comment part and adjust the '@include' domains to your needs, e.g. like this:
-`@include http://example.com/*`
+`@include http://example.com/*` (just replace the examples)
   - The placeholder stands for any page on this domain
   - Make sure to correctly write 'http' or 'https' (if unsure, add both)
 
@@ -111,7 +121,9 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 #### Check the content
 
 3. Click through the website elements to trigger the plugins checking mechanisms.
-   - (During testing I've found there can be a delay of a second or more until they load and check the text)
+   - Grammarly: It has a slight delay (1-2 seconds) and might require editing the text
+   - LanguageTool: Double clicking in text triggers the check
+     - Note that sometimes its icon will be shown in the bottom right of the full screen, not within the element itself
 4. Try and change some text. Add some intentional mistakes to see if everything is working.
 5. Now you should see the tool suggesting changes and - if enabled - the browsers native spell checker kick in.
 
