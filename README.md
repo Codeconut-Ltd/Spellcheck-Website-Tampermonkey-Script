@@ -16,10 +16,9 @@
 
 ## About
 
-Enable browser + plugin spell checking ability within static website content elements.
-This is different from basically all other spell checker tools, as they work _only_ with input forms or editable elements.
+Enable browser + plugin spell checking ability within static website content elements. This is different from basically all other spell checker tools, as they work _only_ with input forms or editable elements.
 
-Here's the trick: This script sets _anything_ to be editable. This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
+**Important:** The spell checking is intended for frontend views only. Don't use it in backend/admin tools.
 
 ### Challenges
 
@@ -36,8 +35,13 @@ Here's the trick: This script sets _anything_ to be editable. This allows you to
 
 ### Limitations
 
-This script makes sense if you use plugins like 'Grammarly' (and others).
-If you don't use them, there is no benefit from using this script.
+Script
+- It makes sense if you use plugins like 'Grammarly' (and others). If you don't use them, there is no benefit from using this script.
+- Spell checking will work anywhere, but still requires to be triggered manually. This is the same way as these tools work if you edit it in their own environment. They will react only to your input and interaction. It can be a bit annoying to do, but the results are surely worth it!
+
+External
+- Some spell check tools have text length limits (depending on your plan). This might lead to long text being ignored.
+
 
 ### Alternatives
 
@@ -65,7 +69,6 @@ Great plugins that work with your code:
 - You know how to use browser plugins and can figure out the one we need.
 - You have a spell checking plugin or want to install and use one.
 
-
 ### 1. Setup spell checking
 
 Optional: If you don't already have one, install a language checking plugin like one of these:
@@ -77,7 +80,6 @@ I've tested this script with these plugins. It probably works with more than jus
 
 **Important:** Go with a single solution!
 Enabling multiple plugins simultaneously could lead to none of them working at all.
-
 
 ### 2. Setup script
 
@@ -95,8 +97,33 @@ Enabling multiple plugins simultaneously could lead to none of them working at a
 
 Before progressing: Make sure to read the [warnings](#warnings) section carefully!
 
+#### Start
+
 1. Go to any of the websites you defined in the script
    - This is NOT intended to work with forms and backend editing tools!
+2. Check if your spell check plugin is enabled and the 'Tampermonkey' icon shows that the script for your website is working.
+
+#### Check the content
+
+3. Click through the website elements to trigger the plugins checking mechanisms.
+   - (During testing I've found there can be a delay of a second or more until they load and check the text)
+4. Try and change some text. Add some intentional mistakes to see if everything is working.
+5. Now you should see the tool suggesting changes and - if enabled - the browsers native spell checker kick in.
+
+
+#### What now?
+
+- Fix the corrections at their source.
+  - Suggestion: If you cannot access it or it's not your task to do so; save the new text, location and add a screenshot for other team members.
+
+
+### 4. Advanced use
+
+You can also manually trigger the script by calling this in your browser console:
+
+- `window.ccCheckSpelling()`
+
+This will apply the required HTML changes to any elements to make the spell checkers work (again). Great for dynamically loaded content, that changes while you browse the page!
 
 
 <br><br>
@@ -105,12 +132,32 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 
 ## How it works
 
+Here's the trick: This script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
 
+This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
 
 <br><br>
 
 ---
 
-## Warning
+## Warnings
 
+When and Where to use
+- Only temporary, for text QA purposes. I highly suggest to disable the script in your browser plugin, whenever you don't need it.
+
+Where **not** to use
+- This script will break the page and things might not work and behave as they should.
+  - Don't worry if the layout breaks, it's not permanent (just reload the page)
+  - Remember, this is just for spell checking, nothing else!
+- Do not use this script in any backend environment,
+where things are configured and saved. It will clash with the regular features.
+
+<br><br>
+
+---
+
+## Todo
+
+- Apply and trigger content editability only when and where needed
+- Disable clickable elements to prevent redirection and unwanted UI updates?
 
