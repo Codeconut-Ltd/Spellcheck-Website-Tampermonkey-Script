@@ -18,7 +18,7 @@
 
 Enable browser + plugin spell checking ability within static website content elements. This is different from basically all other spell checker tools, as they work _only_ with input forms or editable elements.
 
-**Important:** The spell checking is intended for frontend views only. Don't use it in backend/admin tools.
+**Important:** This script is intended for frontend views only. Don't use it in backend/admin tools.
 
 ### Challenges
 
