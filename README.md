@@ -20,9 +20,10 @@ Enable browser + plugin spell checking ability within static website content ele
 
 **Important:** This script is intended for frontend views only. Don't use it in backend/admin tools.
 
+### Preview
+
 ![Example](preview-example.png)
 
-<br>
 
 ### Challenges
 
@@ -90,7 +91,7 @@ Enabling multiple plugins simultaneously could lead to none of them working at a
 1. Download the source code
 2. Install the browser plugin [Tampermonkey](https://www.tampermonkey.net/)
 3. Add a 'New userscript' in Tampermonkey and remove its default code
-4. Copy the content of the JavaScript in the userscript
+4. Copy the [JavaScript](/scripts/tampermonkey-spellcheck.js) in the userscript form
 5. Edit the top-comment part and adjust the '@include' domains to your needs, e.g. like this:
 `@include http://example.com/*`
   - The placeholder stands for any page on this domain
