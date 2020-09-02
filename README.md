@@ -187,6 +187,8 @@ where things are configured and saved. It will clash with the regular features.
 ## Todo
 
 - Find out which HTML attributes are required exactly (it's a combination of them, but not all)
+- Implement auto-reload for Single Page Applications (like Angular) on content/route change (?)
+  - Alternative: Implement UI and hotkey to manually trigger the tool when needed
 - Apply and trigger content editability only when and where needed
 - Disable clickable elements to prevent redirection and unwanted UI updates?
-
+- Legals: Find out if this tool violates any API restrictions (it shouldn't and is not intended so)
