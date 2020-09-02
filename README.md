@@ -136,11 +136,22 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 
 ### 4. Advanced use
 
+#### Trigger manually
+
 You can also manually trigger the script by calling this in your browser console:
 
 - `window.ccCheckSpelling()`
 
 This will apply the required HTML changes to any elements to make the spell checkers work (again). Great for dynamically loaded content, that changes while you browse the page!
+
+#### Enable globally
+
+Just write the domains to use like this:
+
+````
+// @include http://*
+// @include https://*
+````
 
 
 <br><br>
