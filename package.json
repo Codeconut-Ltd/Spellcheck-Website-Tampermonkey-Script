@@ -9,15 +9,17 @@
     "gulp-build": "npx gulp"
   },
   "dependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "gulp": "^4.0.2",
     "gulp-all": "^1.1.0",
     "gulp-cli": "^2.3.0",
+    "gulp-replace": "^1.0.0",
     "prettier": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "gulp": "^4.0.2"
+    "eslint-plugin-import": "^2.22.0"
   }
 }
