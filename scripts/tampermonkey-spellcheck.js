@@ -1,36 +1,62 @@
 // ==UserScript==
-// @name         Spell Checking toggle
-// @description  Enable browser plugin spell checking within website content
+// @name         Spellcheck Website Content Helper
+// @description  Enables browser plugin spell checking abilities within website content.
 // @author       Codeconut Ltd.
-// @version      0.0.1
+// @version      0.0.3
 // @grant        none
-// @namespace    CodeconutSpellCheck
-// @include      http://example.com/*
-// @include      http://localhost:1234/*
+// @namespace    CodeconutSpellCheckHelper
+// @include      http*://dev-*.test*
+// @include      http*://localhost*
+// @include      XXX http*://*
 // ==/UserScript==
-(function () {
+(() => {
   'use strict';
 
-  document.body.contentEditable = true;
-  document.designMode = 'on';
+  class SpellCheckHelper {
+    constructor (nodes, doc) {
+      this.nodes = nodes;
+      this.doc   = doc;
+    }
 
-  window.ccCheckSpelling = () => {
-    console.info('TAMPERMONKEY: window.ccCheckSpelling()');
+    /**
+     * Enable spell checking support.
+     * Freshly check for currently available DOM elements.
+     */
+    enable () {
+      const nodeList = document.querySelectorAll(this.nodes);
 
-    var nodeList = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,span'); // a,abbr,pre,code
+      Array.from(nodeList).map(this.#transformElements);
 
-    Array.from(nodeList).map((element, _index) => {
-      //element.setAttribute('class', 'notranslate');
+      this.#transformBody();
+    }
+
+    #transformBody () {
+      document.body.contentEditable = true;
+      document.designMode = 'on';
+    }
+
+    /**
+     * Modify desired HTML elements to make them spell-check compatible.
+     */
+    #transformElements (element, _index) {
+      // For all spell checking tools
       element.setAttribute('spellcheck', 'true');
       element.setAttribute('contenteditable', 'true');
-      element.setAttribute('dir', 'ltr');
-      element.setAttribute('tabindex', '0');
-      element.setAttribute('aria-multiline', 'true');
-      element.setAttribute('role', 'textbox');
-    });
-  };
 
-  window.ccCheckSpelling();
+      // Additionally needed by Grammarly
+      element.setAttribute('tabindex', '0');
+    }
+  }
+
+  const spellCheckHelper = new SpellCheckHelper('h1, h2, h3, h4, h5, h6, p, li, span', document);
+
+    console.warn("trigger NOW");
+  spellCheckHelper.enable();
+
+  window.ccCheckSpelling = () => {
+    console.warn("trigger on demand");
+    spellCheckHelper.enable();
+  };
 
 })();
 
