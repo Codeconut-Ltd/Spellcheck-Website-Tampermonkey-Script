@@ -154,17 +154,17 @@ This will apply the required HTML changes to any elements to make the spell chec
 
 #### Enable globally
 
-Just write the domains to use like this:
-
-```
-// @include http*://*
-```
-
-Or for typical DEV-environments:
+Enable on typical DEV-environments:
 
 ```
 // @include http*://localhost*
 // @include http*://dev-*.test*
+```
+
+Enable anywhere (not recommended):
+
+```
+// @include http*://*
 ```
 
 
