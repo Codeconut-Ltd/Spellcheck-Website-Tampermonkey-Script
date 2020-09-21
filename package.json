@@ -5,8 +5,11 @@
   "author": "Codeconut Ltd.",
   "version": "0.0.3",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "gulp-build": "npx gulp"
+  },
   "dependencies": {
+    "gulp-all": "^1.1.0",
     "gulp-cli": "^2.3.0",
     "prettier": "^2.1.2"
   },

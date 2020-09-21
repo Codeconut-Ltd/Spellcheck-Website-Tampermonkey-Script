@@ -184,6 +184,7 @@ This allows you to trigger spell checking in any element, even if they are dynam
 
 ## Todo
 
+- Enable manual triggering via prompt() after content load
 - Find out which HTML attributes are required exactly (it's a combination of them, but not all)
 - Implement auto-reload for Single Page Applications (like Angular) on content/route change (?)
   - Alternative: Implement UI and hotkey to manually trigger the tool when needed
