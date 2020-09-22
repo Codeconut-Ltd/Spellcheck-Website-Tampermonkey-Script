@@ -14,6 +14,8 @@
 ---
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_Spellcheck-Websites&metric=alert_status)](https://sonarcloud.io/dashboard?id=Codeconut-Ltd_Spellcheck-Websites)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Codeconut-Ltd/Spellcheck-Websites/issues)
+
 
 <br><br>
 
