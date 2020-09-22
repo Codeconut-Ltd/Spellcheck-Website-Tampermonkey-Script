@@ -13,6 +13,8 @@
 
 ---
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChristianOellers_2D-Space-Shooter&metric=alert_status)](https://sonarcloud.io/dashboard?id=ChristianOellers_2D-Space-Shooter)
+
 <br><br>
 
 ## Preview
