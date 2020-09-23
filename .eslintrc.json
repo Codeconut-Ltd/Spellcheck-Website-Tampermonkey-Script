@@ -13,7 +13,6 @@
   },
   "plugins": ["prettier"],
   "rules": {
-    "newline-per-chained-call": 0,
     "max-len": [
       2,
       140,
