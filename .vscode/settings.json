@@ -1,0 +1,31 @@
+{
+  // ------------------------------------------------------------------------------------------------------------------------------ VSCode
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "editor.wordWrap": "off",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "eslint.format.enable": true,
+  "eslint.workingDirectories": [
+    "./src"
+  ],
+  // --------------------------------------------------------------------------------------------------------------------------- Filetypes
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {}
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+  },
+  "[markdown]": {
+    "editor.acceptSuggestionOnEnter": "off"
+  }
+}
