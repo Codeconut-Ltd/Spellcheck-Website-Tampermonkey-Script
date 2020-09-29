@@ -23,13 +23,13 @@
 
 With [Grammarly](https://app.grammarly.com/)
 
-![Preview - Grammarly](images/preview-grammarly.png)
+![Preview – Grammarly](images/preview-grammarly.png)
 
 <br>
 
 With [LanguageTool](https://languagetool.org/)
 
-![Preview - LanguageTool](images/preview-languagetool.png)
+![Preview – LanguageTool](images/preview-languagetool.png)
 
 ---
 
@@ -128,10 +128,10 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 
 3. Click through the website elements to trigger the plugins checking mechanisms.
    - Grammarly: It has a slight delay (1-2 seconds) and might require editing the text
-   - LanguageTool: Double clicking in text triggers the check
+   - LanguageTool: Double-clicking in text triggers the check
      - Note that sometimes its icon will be shown in the bottom right of the full screen, not within the element itself
 4. Try and change some text. Add some intentional mistakes to see if everything is working.
-5. Now you should see the tool suggesting changes and - if enabled - the browsers native spell checker kick in.
+5. Now you should see the tool suggesting changes and – if enabled – the browsers native spell checker kick in.
 
 
 #### What now?
@@ -177,7 +177,7 @@ This allows you to trigger spell checking in any element, even if they are dynam
 ## Warnings
 
 When and Where to use
-- Only temporary, for text QA purposes. I highly suggest to disable the script in your browser plugin, whenever you don't need it.
+- Only temporary, for text QA purposes. I highly suggest disabling the script in your browser plugin, whenever you don't need it.
 
 Where **not** to use
 - This script will break the page and things might not work and behave as they should.
