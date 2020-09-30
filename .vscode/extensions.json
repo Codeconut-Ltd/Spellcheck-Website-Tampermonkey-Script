@@ -1,13 +1,7 @@
 {
   "recommendations": [
-    // Required
     "alefragnani.bookmarks",
     "dbaeumer.vscode-eslint",
-    "editorconfig.editorconfig",
-    // Recommended
-    "eamodio.gitlens",
-    "huizhou.githd",
-    "mhutchie.git-graph",
-    "tomsaunders.vscode-workspace-explorer"
+    "editorconfig.editorconfig"
   ]
 }

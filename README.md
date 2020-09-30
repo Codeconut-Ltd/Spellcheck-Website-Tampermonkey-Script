@@ -1,4 +1,4 @@
-![Example](images/teaser.png)
+![Spellcheck Websites – Tampermonkey Script](teaser.png)
 
 # Spellcheck Website Content Helper
 
@@ -12,19 +12,22 @@
 
 ---
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_Spellcheck-Websites&metric=alert_status)](https://sonarcloud.io/dashboard?id=Codeconut-Ltd_Spellcheck-Websites)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Codeconut-Ltd/Spellcheck-Websites/issues)
+
 <br><br>
 
 ## Preview
 
 With [Grammarly](https://app.grammarly.com/)
 
-![Preview - Grammarly](images/preview-grammarly.png)
+![Preview – Grammarly](images/preview-grammarly.png)
 
 <br>
 
 With [LanguageTool](https://languagetool.org/)
 
-![Preview - LanguageTool](images/preview-languagetool.png)
+![Preview – LanguageTool](images/preview-languagetool.png)
 
 ---
 
@@ -59,12 +62,13 @@ Enable browser + plugin spell checking ability within static website content ele
 ### Limitations
 
 This script
+
 - It makes sense if you use plugins like 'Grammarly' (and others). If you don't use them, there is no benefit from using this script.
 - Spell checking will work anywhere, but still requires to be triggered manually. This is the same way as these tools work if you edit it in their own environment. They will react only to your input and interaction. It can be a bit annoying to do, but the results are surely worth it!
 
 External spell checkers
-- Some spel checking services have text length limits (depending on your plan). This might lead to long text being ignored.
 
+- Some spel checking services have text length limits (depending on your plan). This might lead to long text being ignored.
 
 ### Alternatives
 
@@ -79,7 +83,6 @@ Great plugins that work with your code:
 
 - [SpellChecker](https://marketplace.visualstudio.com/items?itemName=swyphcosmo.spellchecker)
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
-
 
 <br><br>
 
@@ -111,10 +114,10 @@ Enabling multiple plugins simultaneously could lead to none of them working at a
 3. Add a 'New userscript' in Tampermonkey and remove its default code
 4. Copy the [JavaScript](/scripts/tampermonkey-spellcheck.js) in the userscript form
 5. Edit the top-comment part and adjust the '@include' domains to your needs, e.g. like this:
-`@include http://example.com/*` (just replace the examples)
-  - The placeholder stands for any page on this domain
-  - Make sure to correctly write 'http' or 'https' (if unsure, add both)
+   `@include http://example.com/*` (just replace the examples)
 
+- The placeholder stands for any page on this domain
+- Make sure to correctly write 'http' or 'https' (if unsure, add both)
 
 ### 3. Use script
 
@@ -130,17 +133,15 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 
 3. Click through the website elements to trigger the plugins checking mechanisms.
    - Grammarly: It has a slight delay (1-2 seconds) and might require editing the text
-   - LanguageTool: Double clicking in text triggers the check
+   - LanguageTool: Double-clicking in text triggers the check
      - Note that sometimes its icon will be shown in the bottom right of the full screen, not within the element itself
 4. Try and change some text. Add some intentional mistakes to see if everything is working.
-5. Now you should see the tool suggesting changes and - if enabled - the browsers native spell checker kick in.
-
+5. Now you should see the tool suggesting changes and – if enabled – the browsers native spell checker kick in.
 
 #### What now?
 
 - Fix the corrections at their source.
   - Suggestion: If you cannot access it or it's not your task to do so; save the new text, location and add a screenshot for other team members.
-
 
 ### 4. Advanced use
 
@@ -167,7 +168,6 @@ Enable anywhere (not recommended):
 // @include http*://*
 ```
 
-
 <br><br>
 
 ---
@@ -175,7 +175,6 @@ Enable anywhere (not recommended):
 ## How it works
 
 The script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
-
 This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
 
 <br><br>
