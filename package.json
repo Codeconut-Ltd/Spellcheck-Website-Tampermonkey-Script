@@ -1,12 +1,16 @@
 {
   "name": "spellcheck-website-content-helper",
   "description": "Enables browser plugin spell checking abilities within website content",
-  "license": "Copyright (c) 2020 Codeconut Ltd.",
   "author": "Codeconut Ltd.",
+  "license": "MIT",
   "version": "0.0.3",
+  "main": "",
   "private": true,
   "scripts": {
-    "gulp-build": "npx gulp"
+    "gulp-build": "npx gulp",
+    "project:clean": "rm -rf node_modules",
+    "project:install": "npm run project:clean && npm install",
+    "project:update": "npm run project:clean && npm update"
   },
   "dependencies": {
     "eslint-config-prettier": "^6.11.0",
