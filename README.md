@@ -2,10 +2,9 @@
 
 # Spellcheck Website Content Helper
 
-- [Preview](#preview)
 - [About](#about)
+- [Examples](#examples)
 - [How to use](#how-to-use)
-- [How it works](#how-it-works)
 - [Todo](#todo)
 
 <br>
@@ -14,22 +13,6 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_Spellcheck-Websites&metric=alert_status)](https://sonarcloud.io/dashboard?id=Codeconut-Ltd_Spellcheck-Websites)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Codeconut-Ltd/Spellcheck-Websites/issues)
-
-<br><br>
-
-## Preview
-
-With [Grammarly](https://app.grammarly.com/)
-
-![Preview – Grammarly](images/preview-grammarly.png)
-
-<br>
-
-With [LanguageTool](https://languagetool.org/)
-
-![Preview – LanguageTool](images/preview-languagetool.png)
-
----
 
 <br><br>
 
@@ -84,9 +67,30 @@ Great plugins that work with your code:
 - [SpellChecker](https://marketplace.visualstudio.com/items?itemName=swyphcosmo.spellchecker)
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
 
+### How it works
+
+The script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
+This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
+
 <br><br>
 
 ---
+
+## Examples
+
+With [Grammarly](https://app.grammarly.com/)
+
+![Preview – Grammarly](images/preview-grammarly.png)
+
+<br>
+
+With [LanguageTool](https://languagetool.org/)
+
+![Preview – LanguageTool](images/preview-languagetool.png)
+
+---
+
+<br><br>
 
 ## How to use
 
@@ -167,15 +171,6 @@ Enable anywhere (not recommended):
 ```
 // @include http*://*
 ```
-
-<br><br>
-
----
-
-## How it works
-
-The script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
-This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
 
 <br><br>
 
