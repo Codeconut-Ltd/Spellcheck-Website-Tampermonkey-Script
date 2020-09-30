@@ -2,6 +2,7 @@
   "recommendations": [
     "alefragnani.bookmarks",
     "dbaeumer.vscode-eslint",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
   ]
 }
