@@ -84,6 +84,8 @@ Great plugins that work with your code:
 ---
 
 ## How to use
+- easy to use
+
 
 ### Prerequisites
 
@@ -198,3 +200,9 @@ where things are configured and saved. It will clash with the regular features.
 - Apply and trigger content editability only when and where needed
 - Disable clickable elements to prevent redirection and unwanted UI updates?
 - Legals: Find out if this tool violates any API restrictions (it shouldn't and is not intended so)
+
+
+### stay home,stay safe
+- take care and thank you for visiting
+
+
