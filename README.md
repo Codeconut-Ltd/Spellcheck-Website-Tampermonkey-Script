@@ -1,6 +1,6 @@
 ![Example](images/teaser.png)
 
-# Spellcheck Websites
+# Spellcheck Websites- for most prominent used
 
 - [Preview](#preview)
 - [About](#about)
