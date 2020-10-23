@@ -1,12 +1,10 @@
-![Example](images/teaser.png)
+![Spellcheck Websites – Tampermonkey Script](teaser.png)
 
-# Spellcheck Websites
+# Spellcheck Website Content Helper
 
-- [Preview](#preview)
 - [About](#about)
+- [Examples](#examples)
 - [How to use](#how-to-use)
-- [How it works](#how-it-works)
-- [Warnings](#warnings)
 - [Todo](#todo)
 
 <br>
@@ -14,23 +12,6 @@
 ---
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_Spellcheck-Websites&metric=alert_status)](https://sonarcloud.io/dashboard?id=Codeconut-Ltd_Spellcheck-Websites)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Codeconut-Ltd/Spellcheck-Websites/issues)
-
-<br><br>
-
-## Preview
-
-With [Grammarly](https://app.grammarly.com/)
-
-![Preview – Grammarly](images/preview-grammarly.png)
-
-<br>
-
-With [LanguageTool](https://languagetool.org/)
-
-![Preview – LanguageTool](images/preview-languagetool.png)
-
----
 
 <br><br>
 
@@ -52,35 +33,63 @@ Enable browser + plugin spell checking ability within static website content ele
 
 - Fast in-page QA workflows (independent of code or access to original text documents)
 - As additional measure to other quality measures
+- Only temporary, for text QA purposes. I highly suggest disabling the script in your browser plugin, whenever you don't need it.
+
+### When to avoid use
+
+- This script will break the page and things might not work and behave as they should.
+  - Don't worry if the layout breaks, it's not permanent (just reload the page)
+- Do not use this script in any backend environment or editors. These benefit from native spell checking abilities.
 
 ### Limitations
 
-Script
+This script
 
 - It makes sense if you use plugins like 'Grammarly' (and others). If you don't use them, there is no benefit from using this script.
 - Spell checking will work anywhere, but still requires to be triggered manually. This is the same way as these tools work if you edit it in their own environment. They will react only to your input and interaction. It can be a bit annoying to do, but the results are surely worth it!
 
-External
+External spell checkers
 
-- Some spell check tools have text length limits (depending on your plan). This might lead to long text being ignored.
+- Some spel checking services have text length limits (depending on your plan). This might lead to long text being ignored.
 
 ### Alternatives
 
-- Word like software
-- Edit directly within spell checking tools
+- Word-like software (these can be extended with better spell checkers like those named here)
+- Write directly within spell checking tool editors
 
 #### IDE solutions
 
-##### VSCode
+**VSCode**
 
 Great plugins that work with your code:
 
 - [SpellChecker](https://marketplace.visualstudio.com/items?itemName=swyphcosmo.spellchecker)
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
 
+### How it works
+
+The script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
+This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
+
 <br><br>
 
 ---
+
+## Examples
+
+With [Grammarly](https://app.grammarly.com/)
+
+![Preview – Grammarly](images/preview-grammarly.png)
+
+<br>
+
+With [LanguageTool](https://languagetool.org/)
+
+![Preview – LanguageTool](images/preview-languagetool.png)
+
+---
+
+<br><br>
 
 ## How to use
 
@@ -149,40 +158,18 @@ This will apply the required HTML changes to any elements to make the spell chec
 
 #### Enable globally
 
-Just write the domains to use like this:
+Enable on typical DEV-environments:
 
 ```
-// @include http://*
-// @include https://*
+// @include http*://localhost*
+// @include http*://dev-*.test*
 ```
 
-<br><br>
+Enable anywhere (not recommended):
 
----
-
-## How it works
-
-Here's the trick: This script sets _anything_ to be editable by adding the needed HTML attributes to any elements that usually contain text.
-
-This allows you to trigger spell checking in any element, even if they are dynamically loaded after the page is finished!
-
-<br><br>
-
----
-
-## Warnings
-
-When and Where to use
-
-- Only temporary, for text QA purposes. I highly suggest disabling the script in your browser plugin, whenever you don't need it.
-
-Where **not** to use
-
-- This script will break the page and things might not work and behave as they should.
-  - Don't worry if the layout breaks, it's not permanent (just reload the page)
-  - Remember, this is just for spell checking, nothing else!
-- Do not use this script in any backend environment,
-  where things are configured and saved. It will clash with the regular features.
+```
+// @include http*://*
+```
 
 <br><br>
 
@@ -190,6 +177,7 @@ Where **not** to use
 
 ## Todo
 
+- Enable manual triggering via prompt() after content load
 - Find out which HTML attributes are required exactly (it's a combination of them, but not all)
 - Implement auto-reload for Single Page Applications (like Angular) on content/route change (?)
   - Alternative: Implement UI and hotkey to manually trigger the tool when needed
