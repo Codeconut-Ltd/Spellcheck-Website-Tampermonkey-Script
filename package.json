@@ -1,0 +1,24 @@
+{
+  "name": "spellcheck-website-content-helper",
+  "description": "Enables browser plugin spell checking abilities within website content",
+  "author": "Codeconut Ltd.",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "",
+  "private": true,
+  "scripts": {
+    "project:clean": "rm -rf node_modules",
+    "project:install": "npm run project:clean && npm install",
+    "project:update": "npm run project:clean && npm update"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}

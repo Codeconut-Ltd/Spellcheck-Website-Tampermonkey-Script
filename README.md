@@ -16,7 +16,6 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Codeconut-Ltd_Spellcheck-Websites&metric=alert_status)](https://sonarcloud.io/dashboard?id=Codeconut-Ltd_Spellcheck-Websites)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Codeconut-Ltd/Spellcheck-Websites/issues)
 
-
 <br><br>
 
 ## Preview
@@ -57,12 +56,13 @@ Enable browser + plugin spell checking ability within static website content ele
 ### Limitations
 
 Script
+
 - It makes sense if you use plugins like 'Grammarly' (and others). If you don't use them, there is no benefit from using this script.
 - Spell checking will work anywhere, but still requires to be triggered manually. This is the same way as these tools work if you edit it in their own environment. They will react only to your input and interaction. It can be a bit annoying to do, but the results are surely worth it!
 
 External
-- Some spell check tools have text length limits (depending on your plan). This might lead to long text being ignored.
 
+- Some spell check tools have text length limits (depending on your plan). This might lead to long text being ignored.
 
 ### Alternatives
 
@@ -77,7 +77,6 @@ Great plugins that work with your code:
 
 - [SpellChecker](https://marketplace.visualstudio.com/items?itemName=swyphcosmo.spellchecker)
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
-
 
 <br><br>
 
@@ -109,10 +108,10 @@ Enabling multiple plugins simultaneously could lead to none of them working at a
 3. Add a 'New userscript' in Tampermonkey and remove its default code
 4. Copy the [JavaScript](/scripts/tampermonkey-spellcheck.js) in the userscript form
 5. Edit the top-comment part and adjust the '@include' domains to your needs, e.g. like this:
-`@include http://example.com/*` (just replace the examples)
-  - The placeholder stands for any page on this domain
-  - Make sure to correctly write 'http' or 'https' (if unsure, add both)
+   `@include http://example.com/*` (just replace the examples)
 
+- The placeholder stands for any page on this domain
+- Make sure to correctly write 'http' or 'https' (if unsure, add both)
 
 ### 3. Use script
 
@@ -133,12 +132,10 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 4. Try and change some text. Add some intentional mistakes to see if everything is working.
 5. Now you should see the tool suggesting changes and – if enabled – the browsers native spell checker kick in.
 
-
 #### What now?
 
 - Fix the corrections at their source.
   - Suggestion: If you cannot access it or it's not your task to do so; save the new text, location and add a screenshot for other team members.
-
 
 ### 4. Advanced use
 
@@ -146,7 +143,7 @@ Before progressing: Make sure to read the [warnings](#warnings) section carefull
 
 You can also manually trigger the script by calling this in your browser console:
 
-- `window.ccCheckSpelling()`
+- `window.ccSpellCheck()`
 
 This will apply the required HTML changes to any elements to make the spell checkers work (again). Great for dynamically loaded content, that changes while you browse the page!
 
@@ -154,11 +151,10 @@ This will apply the required HTML changes to any elements to make the spell chec
 
 Just write the domains to use like this:
 
-````
+```
 // @include http://*
 // @include https://*
-````
-
+```
 
 <br><br>
 
@@ -177,14 +173,16 @@ This allows you to trigger spell checking in any element, even if they are dynam
 ## Warnings
 
 When and Where to use
+
 - Only temporary, for text QA purposes. I highly suggest disabling the script in your browser plugin, whenever you don't need it.
 
 Where **not** to use
+
 - This script will break the page and things might not work and behave as they should.
   - Don't worry if the layout breaks, it's not permanent (just reload the page)
   - Remember, this is just for spell checking, nothing else!
 - Do not use this script in any backend environment,
-where things are configured and saved. It will clash with the regular features.
+  where things are configured and saved. It will clash with the regular features.
 
 <br><br>
 

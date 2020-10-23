@@ -11,26 +11,59 @@
 (function () {
   'use strict';
 
-  document.body.contentEditable = true;
-  document.designMode = 'on';
+  class SpellCheckHelper {
+    /**
+     * Pass dependencies and bind public interface to manually trigger spell check.
+     *
+     * @param {string} nodeSelector DOM nodes where spell check will be made available (as CSS selector).
+     * @param {object} win window reference.
+     */
+    constructor(nodeSelector, win) {
+      this.nodeSelector = nodeSelector;
+      this.win = win;
+      this.doc = win.document;
 
-  window.ccCheckSpelling = () => {
-    console.info('TAMPERMONKEY: window.ccCheckSpelling()');
+      window.ccSpellCheck = () => {
+        this.enable();
+      };
+    }
 
-    var nodeList = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,span'); // a,abbr,pre,code
+    /**
+     * Enable spell checking support.
+     * Freshly check for currently available DOM elements.
+     */
+    enable() {
+      const nodeList = document.querySelectorAll(this.nodes);
 
-    Array.from(nodeList).map((element, _index) => {
-      //element.setAttribute('class', 'notranslate');
+      Array.from(nodeList).map(this.transformElements);
+
+      this.transformBody();
+    }
+
+    /**
+     *
+     */
+    transformBody() {
+      this.doc.body.contentEditable = true;
+      this.doc.designMode = 'on';
+    }
+
+    /**
+     * Modify desired HTML elements to make them spell-check compatible.
+     */
+    // eslint-disable-next-line no-unused-vars
+    transformElements(element, _index) {
+      // For all spell checking tools
       element.setAttribute('spellcheck', 'true');
       element.setAttribute('contenteditable', 'true');
-      element.setAttribute('dir', 'ltr');
+
+      // Additionally needed by Grammarly
       element.setAttribute('tabindex', '0');
-      element.setAttribute('aria-multiline', 'true');
-      element.setAttribute('role', 'textbox');
-    });
-  };
+    }
+  }
 
-  window.ccCheckSpelling();
+  // Run
+  const spellCheckHelper = new SpellCheckHelper('h1, h2, h3, h4, h5, h6, p, li, span', window);
 
+  spellCheckHelper.enable();
 })();
-

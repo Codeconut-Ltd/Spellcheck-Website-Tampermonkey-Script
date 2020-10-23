@@ -1,29 +1,34 @@
-# --------------------------------------------------------------------------------------------------------------------------------- Git only
-
 # Compiled output
+/build
 /dist
 /documentation
 /out-tsc
 /tmp
 
+# Composer
+vendor
+composer.lock
+
 # Dependencies
 /node_modules
+package-lock.json
 
 # IDEs + Editors
 *.launch
 *.sublime-workspace
-.c9/
-.classpath
-.project
-.settings/
 /.idea
+.c9
+.classpath
+.history
+.project
+.settings
 
 # IDE - VSCode
+.vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
-.vscode/*
 
 # Misc
 /.sass-cache
@@ -32,6 +37,7 @@
 /libpeerconnection.log
 /typings
 npm-debug.log
+php_errorlog
 testem.log
 yarn-error.log
 
@@ -40,4 +46,3 @@ yarn-error.log
 *desktop.ini
 .DS_Store
 Thumbs.db
-
