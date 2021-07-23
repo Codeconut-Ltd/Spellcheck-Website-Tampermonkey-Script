@@ -1,4 +1,4 @@
-![Spellcheck Websites – Tampermonkey Script](teaser.png)
+![Spellcheck Websites – Tampermonkey Script](images/teaser.png)
 
 # Spellcheck Website Content Helper
 
