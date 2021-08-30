@@ -1,6 +1,6 @@
 ![Spellcheck Websites – Tampermonkey Script](images/teaser.png)
 
-# Spellcheck Website Content Helper
+# Spellcheck Website – Tampermonkey Script
 
 - [About](#about)
 - [Examples](#examples)
